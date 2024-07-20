@@ -32,8 +32,12 @@ cd C:\kafka_2.13-3.5.0\bin\windows
 --property key.separator=, ^
 --group 1
 ```
+
+## Consumer groups
 ### consumers describe
 > .\kafka-consumer-groups.bat --all-groups --all-topics --bootstrap-server 127.0.0.1:9092 --describe
+### reset offset for a group
+> .\kafka-consumer-groups.bat --bootstrap-server 127.0.0.1:9092 --group 1 --topic mytopic --reset-offsets --to-earliest --execute
 
 
 
