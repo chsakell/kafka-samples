@@ -4,6 +4,8 @@ cd C:\kafka_2.13-3.5.0\bin\windows
 
 ### create topic
 > .\kafka-topics.bat --bootstrap-server 127.0.0.1:9092 --create --replication-factor 1 --partitions 3 --topic myorders
+### describe topic
+> kafka-topics.bat --bootstrap-server localhost:9092 --describe --topic mytopic
 ### list topics
 > .\kafka-topics.bat --bootstrap-server 127.0.0.1:9092 --list
 ### reassign partitions
@@ -12,7 +14,7 @@ cd C:\kafka_2.13-3.5.0\bin\windows
 ## Producers
 ### produce
 > .\kafka-console-producer.bat --bootstrap-server 127.0.01:9092 --topic first_topic
-
+### produce with key seperator
 > .\kafka-console-producer.bat --bootstrap-server 127.0.01:9092 --topic myorders --property "parse.key=true" --property "key.separator=:"
 
 ## Consumers
